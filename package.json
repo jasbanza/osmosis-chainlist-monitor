@@ -1,0 +1,30 @@
+{
+  "name": "osmosis-chainlist-monitor",
+  "version": "1.0.0",
+  "description": "Nodejs service to monitor endpoints set in the Osmosis repo's chainlist.json",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasbanza/osmosis-chainlist-monitor.git"
+  },
+  "keywords": [
+    "Osmosis",
+    "monitor",
+    "service"
+  ],
+  "author": "jasbanza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasbanza/osmosis-chainlist-monitor/issues"
+  },
+  "homepage": "https://github.com/jasbanza/osmosis-chainlist-monitor#readme",
+  "dependencies": {
+    "js-console-log-colors": "^1.1.0",
+    "node-fetch": "^2.6.12"
+  }
+}
