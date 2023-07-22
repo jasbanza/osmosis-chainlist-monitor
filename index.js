@@ -20,6 +20,13 @@ const out = new ConsoleLogColors();
     const restBaseURL = chain?.apis?.rest[0]?.address;
     if (!restBaseURL) {
       // if no rest endpoint provided, alert immediately .
+      out.failure(`🔴 ${chain.chain_id} endpoint unavailable`);
+      continue;
+    }
+
+    if(restBaseURL.includes("keplr")){
+      out.warn(`🔵 ${chain.chain_id} keplr endpoint`);
+      continue;
     }
     const urlRestLatestBlock = `${restBaseURL}/cosmos/base/tendermint/v1beta1/blocks/latest`;
     const test = await fetchWithRetries({
